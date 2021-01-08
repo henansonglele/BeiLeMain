@@ -1,0 +1,12 @@
+include ':app'
+rootProject.name='UniversityLibrary'
+
+
+
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+        settingsDir.parentFile,
+        'gx_flutter/.android/include_flutter.groovy'
+))
+include ':gx_flutter'
+project(':gx_flutter').projectDir = new File('../gx_flutter')

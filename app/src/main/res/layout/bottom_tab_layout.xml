@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_dcdcdc"
+        android:id="@+id/bottom_divider_line"
+        />
+    <LinearLayout
+        android:id="@+id/main_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent"
+        android:orientation="horizontal">
+    <RelativeLayout
+        android:id="@+id/tab_store_rl"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:visibility="visible">
+
+        <com.dangdang.gx.ui.view.DDImageView
+            android:id="@+id/tab_store_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/home_store_sel" />
+
+        <com.dangdang.gx.ui.view.DDTextView
+            android:id="@+id/tab_store_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tab_store_iv"
+            android:layout_centerHorizontal="true"
+            android:text="@string/home_store_title"
+            android:textColor="@color/green_gray_selector"
+            android:textSize="10dp" />
+    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/tab_type_rl"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <com.dangdang.gx.ui.view.DDImageView
+                android:id="@+id/tab_type_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/home_type_unsel" />
+
+            <com.dangdang.gx.ui.view.DDTextView
+                android:id="@+id/tab_type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tab_type_iv"
+                android:layout_centerHorizontal="true"
+                android:text="@string/home_type_title"
+                android:textColor="@color/green_gray_selector"
+                android:textSize="10dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/tab_shelf_rl"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <com.dangdang.gx.ui.view.DDImageView
+                android:id="@+id/tab_shelf_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/home_shelf_unsel" />
+
+            <com.dangdang.gx.ui.view.DDTextView
+                android:id="@+id/tab_shelf_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tab_shelf_iv"
+                android:layout_centerHorizontal="true"
+                android:text="@string/home_shelf_title"
+                android:textColor="@color/green_gray_selector"
+                android:textSize="10dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/tab_circle_rl"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <com.dangdang.gx.ui.view.DDImageView
+                android:id="@+id/tab_circle_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/home_circle_unsel" />
+
+            <com.dangdang.gx.ui.view.DDTextView
+                android:id="@+id/tab_circle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tab_circle_iv"
+                android:layout_centerHorizontal="true"
+                android:text="@string/home_circle_title"
+                android:textColor="@color/green_gray_selector"
+                android:textSize="10dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/tab_personal_rl"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <com.dangdang.gx.ui.view.DDImageView
+                android:id="@+id/tab_personal_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/home_personal_unsel" />
+
+            <com.dangdang.gx.ui.view.DDTextView
+                android:id="@+id/tab_personal_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tab_personal_iv"
+                android:layout_centerHorizontal="true"
+                android:text="@string/home_personal_title"
+                android:textColor="@color/green_gray_selector"
+                android:textSize="10dp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

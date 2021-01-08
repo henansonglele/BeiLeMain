@@ -1,0 +1,10 @@
+/.metadata
+/.gradle
+/.idea
+build
+*.iml
+local.properties
+/bin
+/gen
+.svn
+/gradle

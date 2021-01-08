@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+    <item
+        android:drawable="@drawable/frame_find_1"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_find_2"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_find_3"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_find_4"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_find_5"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_find_6"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_find_7"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_find_8"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_find_9"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_find_10"
+        android:duration="40" />
+
+</animation-list>

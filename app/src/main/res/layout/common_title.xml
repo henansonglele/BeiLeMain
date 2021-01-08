@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_rl"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@color/white">
+
+    <com.dangdang.gx.ui.view.DDImageView
+        android:id="@+id/common_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/back"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/btn_arrow_back" />
+
+    <com.dangdang.gx.ui.view.DDTextView
+        android:id="@+id/title_left_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="@color/gray_666666"
+        android:gravity="center"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:textSize="16dp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/common_left_menu"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <com.dangdang.gx.ui.view.DDImageView
+            android:id="@+id/common_menu_left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:scaleType="centerInside" />
+
+        <com.dangdang.gx.ui.view.DDImageView
+            android:id="@+id/common_left_menu_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/common_menu_left_btn"
+            android:paddingBottom="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            android:scaleType="centerInside" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.dangdang.gx.ui.view.DDTextView
+            android:id="@+id/common_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/title_color_444444"
+            android:textSize="17dp"/>
+
+        <com.dangdang.gx.ui.view.DDTextView
+            android:id="@+id/common_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="#d6d6d6"
+            android:textSize="12dp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/common_menu"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true">
+
+        <com.dangdang.gx.ui.view.DDTextView
+            android:id="@+id/common_menu_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="right|center_vertical"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:singleLine="true"
+            android:textColor="@color/gray_666666"
+            android:textSize="16dp" />
+
+        <com.dangdang.gx.ui.view.DDImageView
+            android:id="@+id/common_menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="@dimen/activity_horizontal_margin"
+            android:paddingRight="13dp"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            android:scaleType="centerInside" />
+
+        <com.dangdang.gx.ui.view.DDImageView
+            android:id="@+id/common_menu_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/common_menu_btn"
+            android:paddingRight="20dp"
+            android:paddingLeft="13dp"
+            android:scaleType="centerInside"
+            android:visibility="visible"
+            android:layout_alignWithParentIfMissing="true"/>
+    </RelativeLayout>
+    
+    <View
+        android:id="@+id/title_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_cccccc"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

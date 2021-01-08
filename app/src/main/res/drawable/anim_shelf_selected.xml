@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+    <item
+        android:drawable="@drawable/frame_shelf_1"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_shelf_2"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_shelf_3"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_shelf_4"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_shelf_5"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_shelf_6"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_shelf_7"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_shelf_8"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_shelf_9"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_shelf_10"
+        android:duration="40" />
+
+</animation-list>

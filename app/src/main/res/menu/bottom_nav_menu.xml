@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home_store"
+        android:icon="@drawable/home_store_sel"
+        android:title="@string/home_store_title" />
+
+    <item
+        android:id="@+id/home_type"
+        android:icon="@drawable/home_type_sel"
+        android:title="@string/home_type_title" />
+
+    <item
+        android:id="@+id/home_shelf"
+        android:icon="@drawable/home_shelf_sel"
+        android:title="@string/home_shelf_title" />
+    <item
+        android:id="@+id/home_circle"
+        android:icon="@drawable/home_circle_sel"
+        android:title="@string/home_circle_title" />
+    <item
+        android:id="@+id/home_personal"
+        android:icon="@drawable/home_personal_sel"
+        android:title="@string/home_personal_title"
+        />
+
+</menu>

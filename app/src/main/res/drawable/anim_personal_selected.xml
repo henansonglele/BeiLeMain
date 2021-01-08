@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+    <item
+        android:drawable="@drawable/frame_personal_1"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_personal_2"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_personal_3"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_personal_4"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_personal_5"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_personal_6"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_personal_7"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_personal_8"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_personal_9"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/frame_personal_10"
+        android:duration="40" />
+
+</animation-list>

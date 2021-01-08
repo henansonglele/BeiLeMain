@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">UniversityLibrary</string>
+    <string name="home_store_title">书城</string>
+    <string name="home_type_title">类型</string>
+    <string name="home_shelf_title">书架</string>
+    <string name="home_circle_title">读书圈</string>
+    <string name="home_personal_title">个人中心</string>
+    <!-- 下拉刷新提示问题 -->
+    <string name="pull_to_refresh_refreshing_label">我在用力加载耶…</string>
+    <string name="pull_to_refresh_pull_label">下拉人家就能刷新耶！</string>
+    <string name="pull_to_refresh_release_label">释放人家就能刷新哟~</string>
+    <string name="listview_footer_loading">正在加载更多数据…</string>
+    <string name="listview_footer_loaded">已加载完毕</string>
+    <string name="listview_footer_load_fail">数据请求失败</string>
+
+    <string name="pull_up_to_refresh_pull_label">上拉加载更多！</string>
+    <string name="pull_up_to_refresh_release_label">释放就能加载更多哟~</string>
+    <string name="error_no_net">网络错误</string>
+    <string name="service_error_tip">抱歉，服务器故障，刷新再试试</string>
+    <string name="can_not_find_page_tip">抱歉，页面找不到了</string>
+    <string name="refresh">刷新</string>
+    <string name="no_net_tip">请检查你的网络连接</string>
+    <string name="back">返回</string>
+    <string name="request_permission">权限申请</string>
+    <string name="grant">去授权</string>
+    <string name="cancel">取消</string>
+    <string name="privacy_policy_content">当当云阅读为了更好地保护您的隐私和信息安全，根据国家相关法律规定和国家标准更新了《当当云阅读用户许可协议》和《当当云阅读隐私政策》，请在您使用前务必仔细阅读并透彻理解，如果您继续使用当当云阅读服务即代表您同意本平台的隐私条款，我们会全力保护您的个人信息安全。</string>
+
+
+</resources>
