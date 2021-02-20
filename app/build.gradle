@@ -112,6 +112,9 @@ dependencies {
     api('cn.jiguang.sdk:jverification:2.5.5')  // 极光
     api('cn.jiguang.sdk:jcore:2.3.0') // 极光
 
+    ///glide
+    implementation 'com.github.bumptech.glide:glide:4.1.1'
+
 }
 
 //aspectjx {
