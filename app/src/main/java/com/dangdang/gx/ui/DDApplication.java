@@ -8,6 +8,7 @@ import com.dangdang.gx.ui.flutterbase.DDFlutterManager;
 import com.dangdang.gx.ui.http.RetrofitManager;
 import com.dangdang.gx.ui.log.LogM;
 import com.dangdang.gx.ui.umeng.UmengStatistics;
+import com.dangdang.gx.ui.utils.DangdangFileManager;
 import com.dangdang.gx.ui.utils.ForegroundV2;
 import com.dangdang.gx.ui.utils.RetrofitParams;
 import com.idlefish.flutterboost.FlutterBoost;
@@ -31,6 +32,10 @@ public class DDApplication extends Application {
         initFlutter();
         ForegroundV2.init(this);
         initUMeng();
+        DangdangFileManager.initSdkMode(this);
+
+        //然后在你的Application的onCreate加入
+        //Glide.get(this).register(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory(new OkHttpClient()));
     }
     public static  DDApplication getInstance(){
         return  mApp;
