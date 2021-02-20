@@ -42,9 +42,16 @@ public class HomeFragment extends Fragment {
 
 
         //glide 展示图片
-        ImageView imageView = getActivity().findViewById(R.id.image);
+        ImageView imageView = root.findViewById(R.id.image);
         String url = "https://pics1.baidu.com/feed/267f9e2f07082838a012520a33efbd094c08f114.jpeg?token=2213ac292dc9eff3e88a0b0c99253c12&s=738243AE40511BDC04236AB70300500A";
-        Glide.with(getActivity().getApplicationContext()).load(url).into(imageView);
+        Glide.with(getActivity()).load(url).into(imageView);
         return root;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+
     }
 }

@@ -49,10 +49,11 @@ public class MainActivity extends AppCompatActivity implements CustomBottomLayou
 
         String temp = "http://e.dangdang.com/h5/dzssy.html?&deviceType=Android";
         final ArrayList<Fragment> fgLists=new ArrayList<>(5);
+
+        fgLists.add(new HomeFragment());
         fgLists.add( StoreNormalHtmlFragment.getInstance(temp));
         fgLists.add(new DDBaseFlutterFragment(PAGE_DD_SHELF_MAIN,null));
         fgLists.add( new HomeFragment());
-        fgLists.add(new HomeFragment());
         fgLists.add(new HomeFragment());
         FragmentPagerAdapter mPagerAdapter=new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override

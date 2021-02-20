@@ -27,11 +27,11 @@ class DDFlutterMethodChannel {
                 synchronized (methodCallHandlers) {
                     callHandler = methodCallHandlers.get(methodCall.method);
                 }
-                if (callHandler != null) {
-                    callHandler.onMethodCall(methodCall, result);
-                } else {
-                    result.notImplemented();
-                }
+                //if (callHandler != null) {
+                //    callHandler.onMethodCall(methodCall, result);
+                //} else {
+                //    result.notImplemented();
+                //}
             }
         });
     }
