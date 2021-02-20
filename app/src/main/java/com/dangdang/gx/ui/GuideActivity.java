@@ -3,18 +3,17 @@ package com.dangdang.gx.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
 import com.dangdang.gx.R;
 import com.dangdang.gx.ui.base.BaseActivity;
 import com.dangdang.gx.ui.dialog.PrivacyPolicyDialog;
-import com.dangdang.gx.ui.log.LogM;
 import com.dangdang.gx.ui.utils.ClickUtil;
 
 public class GuideActivity extends BaseActivity {
 
     @Override
     protected void onCreateImpl(Bundle savedInstanceState) {
-        showPrivacyPolicyDialog();
+        startMain();
+        //showPrivacyPolicyDialog();
     }
 
     private void showPrivacyPolicyDialog() {
