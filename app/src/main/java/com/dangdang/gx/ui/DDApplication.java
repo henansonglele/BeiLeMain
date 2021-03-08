@@ -7,6 +7,8 @@ import com.dangdang.gx.ui.flutter.DDFlutter2NativeUtils;
 import com.dangdang.gx.ui.flutterbase.DDFlutterManager;
 import com.dangdang.gx.ui.http.RetrofitManager;
 import com.dangdang.gx.ui.log.LogM;
+import com.dangdang.gx.ui.matrix.DynamicConfigImplDemo;
+import com.dangdang.gx.ui.matrix.TestPluginListener;
 import com.dangdang.gx.ui.umeng.UmengStatistics;
 import com.dangdang.gx.ui.utils.DangdangFileManager;
 import com.dangdang.gx.ui.utils.ForegroundV2;
@@ -15,6 +17,9 @@ import com.idlefish.flutterboost.FlutterBoost;
 import com.idlefish.flutterboost.Platform;
 import com.idlefish.flutterboost.interfaces.INativeRouter;
 import com.meituan.android.walle.WalleChannelReader;
+import com.tencent.matrix.Matrix;
+import com.tencent.matrix.iocanary.IOCanaryPlugin;
+import com.tencent.matrix.iocanary.config.IOConfig;
 import io.flutter.embedding.android.FlutterView;
 import io.flutter.view.FlutterMain;
 import java.util.HashMap;
@@ -33,7 +38,7 @@ public class DDApplication extends Application {
         ForegroundV2.init(this);
         initUMeng();
         DangdangFileManager.initSdkMode(this);
-
+        initMatrix();
         //然后在你的Application的onCreate加入
         //Glide.get(this).register(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory(new OkHttpClient()));
     }
@@ -72,6 +77,24 @@ public class DDApplication extends Application {
     }
 
 
+    void initMatrix(){
+        Matrix.Builder builder = new Matrix.Builder(this); // build matrix
+        builder.patchListener(new TestPluginListener(this)); // add general pluginListener
+        DynamicConfigImplDemo dynamicConfig = new DynamicConfigImplDemo(); // dynamic config
+
+        // init plugin
+        IOCanaryPlugin ioCanaryPlugin = new IOCanaryPlugin(new IOConfig.Builder()
+                .dynamicConfig(dynamicConfig)
+                .build());
+        //add to matrix
+        builder.plugin(ioCanaryPlugin);
+
+        //init matrix
+        Matrix.init(builder.build());
+
+        // start plugin
+        ioCanaryPlugin.start();
+    }
 
     private void initFlutter() {
         FlutterMain.startInitialization(this);

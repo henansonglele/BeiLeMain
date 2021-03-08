@@ -22,8 +22,9 @@
         />
     <ImageView
         android:id="@+id/image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="400px"
+        android:layout_height="400px"
         tools:ignore="MissingConstraints"
+        android:background="@color/green_07C291"
         ></ImageView>
 </androidx.constraintlayout.widget.ConstraintLayout>
