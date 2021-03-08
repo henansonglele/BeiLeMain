@@ -20,6 +20,7 @@ import com.meituan.android.walle.WalleChannelReader;
 import com.tencent.matrix.Matrix;
 import com.tencent.matrix.iocanary.IOCanaryPlugin;
 import com.tencent.matrix.iocanary.config.IOConfig;
+import com.tencent.mmkv.MMKV;
 import io.flutter.embedding.android.FlutterView;
 import io.flutter.view.FlutterMain;
 import java.util.HashMap;
@@ -39,6 +40,13 @@ public class DDApplication extends Application {
         initUMeng();
         DangdangFileManager.initSdkMode(this);
         initMatrix();
+        initMMKV();
+
+        MMKV kv = MMKV.defaultMMKV();
+        kv.encode("test", "abcdeftlsjfladsjfals");
+
+        LogM.e("test", kv.decodeString("test"));
+
         //然后在你的Application的onCreate加入
         //Glide.get(this).register(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory(new OkHttpClient()));
     }
@@ -77,6 +85,7 @@ public class DDApplication extends Application {
     }
 
 
+    ///腾讯matrix 性能检测 框架
     void initMatrix(){
         Matrix.Builder builder = new Matrix.Builder(this); // build matrix
         builder.patchListener(new TestPluginListener(this)); // add general pluginListener
@@ -96,6 +105,12 @@ public class DDApplication extends Application {
         ioCanaryPlugin.start();
     }
 
+    void initMMKV(){
+        // 设置初始化的根目录
+        //String dir = getFilesDir().getAbsolutePath() + "/mmkv_2";
+        String rootDir = MMKV.initialize(this);
+        LogM.i("MMKV", "mmkv root: " + rootDir);
+    }
     private void initFlutter() {
         FlutterMain.startInitialization(this);
 
