@@ -17,9 +17,11 @@ buildscript {
         classpath 'com.android.tools.build:gradle:3.5.1'
 
         classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.0'
+
+//        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
     }
 }
-
+//apply plugin: 'android-apt'
 apply plugin: 'com.android.application'
 //apply plugin: 'android-aspectjx'
 
@@ -128,6 +130,15 @@ dependencies {
 
     //mmkv
     implementation 'com.tencent:mmkv:1.0.10'
+
+
+    //注解
+    implementation 'com.google.auto.service:auto-service:1.0-rc2'
+        implementation project(':apt-annotation')
+//    implementation 'com.squareup:javapoet:1.12.1'
+//    compileOnly 'com.google.auto.service:auto-service:1.0-rc4'
+//    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc4'
+
 
 
 }

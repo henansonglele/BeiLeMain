@@ -70,10 +70,6 @@ public class MainActivity extends AppCompatActivity implements CustomBottomLayou
         mViewPager.setOffscreenPageLimit(3);
         mViewPager.setCurrentItem(currentItem);
 
-
-
-
-
     }
 
     @Override
