@@ -2,6 +2,7 @@ package com.dangdang.gx.ui;
 
 import android.app.Application;
 import android.content.Context;
+import android.view.Choreographer;
 import com.dangdang.gx.BuildConfig;
 import com.dangdang.gx.ui.flutter.DDFlutter2NativeUtils;
 import com.dangdang.gx.ui.flutterbase.DDFlutterManager;
@@ -47,6 +48,8 @@ public class DDApplication extends Application {
 
         LogM.e("test", kv.decodeString("test"));
 
+        inidMontiorFps();
+
         //然后在你的Application的onCreate加入
         //Glide.get(this).register(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory(new OkHttpClient()));
     }
@@ -64,6 +67,11 @@ public class DDApplication extends Application {
         RetrofitParams.setParam(RetrofitParams.TOKEN, "");
         RetrofitParams.setParam(RetrofitParams.CLIENT_VERSION_NO, "");
         RetrofitManager.init("http://e.dangdang.com");
+    }
+
+///监控丢帧
+    void inidMontiorFps(){
+        Choreographer.getInstance().postFrameCallback(Test.getInstance());
     }
 
     private void initUMeng() {
