@@ -18,6 +18,7 @@ import com.idlefish.flutterboost.FlutterBoost;
 import com.idlefish.flutterboost.Platform;
 import com.idlefish.flutterboost.interfaces.INativeRouter;
 import com.meituan.android.walle.WalleChannelReader;
+import com.squareup.leakcanary.LeakCanary;
 import com.tencent.matrix.Matrix;
 import com.tencent.matrix.iocanary.IOCanaryPlugin;
 import com.tencent.matrix.iocanary.config.IOConfig;
@@ -49,6 +50,10 @@ public class DDApplication extends Application {
         LogM.e("test", kv.decodeString("test"));
 
         inidMontiorFps();
+
+        //设置内存检测
+        //LeakCanary.INSTANCE.showLeakDisplayActivityLauncherIcon(true);
+        LeakCanary.install(this);
 
         //然后在你的Application的onCreate加入
         //Glide.get(this).register(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory(new OkHttpClient()));

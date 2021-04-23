@@ -55,7 +55,7 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity android:name="com.dangdang.gx.ui.html.StoreNormalHtmlActivity" />
-
+        <activity android:name=".ui.BigImage.LargeImageViewActivity"></activity>
         <meta-data
             android:name="UMENG_APPKEY"
             android:value="5ff2c54aadb42d58269ae1e7" />

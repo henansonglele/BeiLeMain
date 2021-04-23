@@ -1,5 +1,6 @@
 package com.dangdang.gx.ui.home;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +16,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import com.bumptech.glide.Glide;
 import com.dangdang.gx.R;
+import com.dangdang.gx.ui.BigImage.LargeImageViewActivity;
 import com.dangdang.gx.ui.utils.LaunchUtils;
 
 public class HomeFragment extends Fragment {
@@ -55,6 +57,9 @@ public class HomeFragment extends Fragment {
                 Bitmap bitmap = Bitmap.createBitmap(imageView.getDrawingCache());
                 imageView.setDrawingCacheEnabled(false);
                 Log.d("count:",""+bitmap.getByteCount());
+
+
+                startActivity(new Intent(getActivity(), LargeImageViewActivity.class));
             }
         });
 
