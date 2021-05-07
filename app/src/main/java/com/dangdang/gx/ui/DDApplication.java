@@ -4,11 +4,14 @@ import android.app.Application;
 import android.content.Context;
 import android.view.Choreographer;
 import com.dangdang.gx.BuildConfig;
-import com.dangdang.gx.ui.TaskStarter.InitBaiduMapTask;
-import com.dangdang.gx.ui.TaskStarter.InitJPushTask;
-import com.dangdang.gx.ui.TaskStarter.InitShareTask;
 import com.dangdang.gx.ui.TaskStarter.TaskManager;
-import com.dangdang.gx.ui.TaskStarter.runOnMianTask;
+import com.dangdang.gx.ui.TaskStarter.taskImp.runOnMianTask;
+import com.dangdang.gx.ui.TaskStarter.taskImp.InitBaiduMapTask;
+import com.dangdang.gx.ui.TaskStarter.taskImp.InitJPushTask;
+import com.dangdang.gx.ui.TaskStarter.taskImp.InitShareTask;
+import com.dangdang.gx.ui.TaskStarter.taskImp.InitTest1Task;
+import com.dangdang.gx.ui.TaskStarter.taskImp.InitTest2Task;
+import com.dangdang.gx.ui.TaskStarter.taskImp.InitTest3Task;
 import com.dangdang.gx.ui.flutter.DDFlutter2NativeUtils;
 import com.dangdang.gx.ui.flutterbase.DDFlutterManager;
 import com.dangdang.gx.ui.http.RetrofitManager;
@@ -65,14 +68,32 @@ public class DDApplication extends Application {
         //Glide.get(this).register(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory(new OkHttpClient()));
 
 
+        long start = System.currentTimeMillis();
+
         TaskManager manager = TaskManager.getInstance(this);
         manager// 默认添加，并发处理
                 .add(new InitBaiduMapTask())  // 在这里需要先处理了另外一个耗时任务initShareSDK，才能再处理它
                 .add(new InitJPushTask())  // 等待主线程处理完毕，再进行执行
                 .add(new InitShareTask())
                 .add(new runOnMianTask())
+                .add(new InitTest1Task())
+                .add(new InitTest2Task())
+                .add(new InitTest3Task())
+                .add(new InitTest1Task())
+                .add(new InitTest2Task())
+                .add(new InitTest3Task())
+                .add(new InitTest1Task())
+                .add(new InitTest2Task())
+                .add(new InitTest3Task())
+                .add(new InitTest1Task())
+                .add(new InitTest2Task())
+                .add(new InitTest3Task())
+                .add(new InitTest1Task())
+                .add(new InitTest2Task())
+                .add(new InitTest3Task())
                 .start();
         manager.startLock();
+        LogM.d("abd", "加载时间"+(System.currentTimeMillis() - start));
 
     }
     public static  DDApplication getInstance(){

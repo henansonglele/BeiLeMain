@@ -3,7 +3,6 @@ package com.dangdang.gx.ui.TaskStarter;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public abstract class Task implements ITask {
 
@@ -44,8 +43,8 @@ public abstract class Task implements ITask {
      */
     @Override
     public ExecutorService runOnExecutor() {
-       return Executors.newFixedThreadPool(3);
-        //return DispatcherExecutor.getIOExecutor();
+       //return Executors.newFixedThreadPool(3);
+        return DispatcherExecutor.getIOExecutor1();
     }
 
     /**

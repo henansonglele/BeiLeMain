@@ -12,6 +12,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/// 异步加载器
 public class TaskManager {
 
     private static TaskManager sInstance;

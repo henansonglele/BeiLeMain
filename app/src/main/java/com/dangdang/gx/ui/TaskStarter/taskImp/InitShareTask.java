@@ -1,5 +1,8 @@
-package com.dangdang.gx.ui.TaskStarter;
+package com.dangdang.gx.ui.TaskStarter.taskImp;
 
+import com.dangdang.gx.ui.TaskStarter.ITask;
+import com.dangdang.gx.ui.TaskStarter.Task;
+import com.dangdang.gx.ui.log.LogM;
 import java.util.List;
 
 public class InitShareTask extends Task {
@@ -17,8 +20,10 @@ public class InitShareTask extends Task {
     @Override
     public void run() {
         try {
-            Thread.sleep(1500);
+            Thread.sleep(100);
             System.out.println("InitShareTask运行完毕，它所在的线程是："+Thread.currentThread().getName());
+            LogM.d("abd", getClass().getSimpleName()+"运行完毕，它所在的线程是："+Thread.currentThread().getName());
+
         } catch (InterruptedException ex) {
             ex.printStackTrace();
         }

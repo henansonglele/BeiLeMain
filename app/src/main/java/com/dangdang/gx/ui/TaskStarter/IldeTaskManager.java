@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 
-///
+///延迟加载器
 public class IldeTaskManager {
 
     private Queue<Task> ildeTaskQueue = new LinkedList<>();
