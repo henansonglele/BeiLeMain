@@ -6,7 +6,9 @@ import android.view.Choreographer;
 import com.dangdang.gx.BuildConfig;
 import com.dangdang.gx.ui.TaskStarter.InitBaiduMapTask;
 import com.dangdang.gx.ui.TaskStarter.InitJPushTask;
+import com.dangdang.gx.ui.TaskStarter.InitShareTask;
 import com.dangdang.gx.ui.TaskStarter.TaskManager;
+import com.dangdang.gx.ui.TaskStarter.runOnMianTask;
 import com.dangdang.gx.ui.flutter.DDFlutter2NativeUtils;
 import com.dangdang.gx.ui.flutterbase.DDFlutterManager;
 import com.dangdang.gx.ui.http.RetrofitManager;
@@ -63,12 +65,12 @@ public class DDApplication extends Application {
         //Glide.get(this).register(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory(new OkHttpClient()));
 
 
-
         TaskManager manager = TaskManager.getInstance(this);
         manager// 默认添加，并发处理
                 .add(new InitBaiduMapTask())  // 在这里需要先处理了另外一个耗时任务initShareSDK，才能再处理它
                 .add(new InitJPushTask())  // 等待主线程处理完毕，再进行执行
-
+                .add(new InitShareTask())
+                .add(new runOnMianTask())
                 .start();
         manager.startLock();
 

@@ -142,6 +142,7 @@ public class TaskManager {
     }
 
     private void runOnMainThread() {
+        ///在TaskManager 当前线程执行run方法，就是在主线程执行run方法。。。。。
         for (Task task : mainThreadTaskArray) {
             new TaskRunnable(task,this).run();
         }
