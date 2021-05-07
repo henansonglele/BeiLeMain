@@ -3,6 +3,8 @@ package com.dangdang.gx.ui.html;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -44,6 +46,9 @@ public class StoreNormalHtmlActivity extends BaseActivity implements BaseReaderH
         initIntentData();
         initUi();
         setOnClickListener();
+
+        ///内存泄漏
+        mHandler.sendMessage(mHandler.obtainMessage());
     }
 
     @Override
@@ -221,5 +226,14 @@ public class StoreNormalHtmlActivity extends BaseActivity implements BaseReaderH
     protected void onPause() {
         super.onPause();
     }
+
+    Handler mHandler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+
+
+            super.handleMessage(msg);
+        }
+    };
 
 }

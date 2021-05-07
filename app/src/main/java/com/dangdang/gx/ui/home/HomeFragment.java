@@ -53,6 +53,8 @@ public class HomeFragment extends Fragment {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                ///展示大图
                 imageView.setDrawingCacheEnabled(true);
                 Bitmap bitmap = Bitmap.createBitmap(imageView.getDrawingCache());
                 imageView.setDrawingCacheEnabled(false);
